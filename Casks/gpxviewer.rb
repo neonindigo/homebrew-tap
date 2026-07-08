@@ -7,15 +7,16 @@ cask "gpxviewer" do
   desc "GPX route viewer with Quick Look thumbnails"
   homepage "https://github.com/mikelrob/gpxviewer"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "GPXViewer.app"
 
   postflight do
     # Register the app (and its Quick Look extension) with LaunchServices
     # so .gpx files pick up the UTI without waiting for a Finder rescan.
-    system_command "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister",
-                   args: ["-f", "#{appdir}/GPXViewer.app"]
+    lsregister = "/System/Library/Frameworks/CoreServices.framework/Frameworks/" \
+                 "LaunchServices.framework/Support/lsregister"
+    system_command lsregister, args: ["-f", "#{appdir}/GPXViewer.app"]
   end
 
   zap trash: [

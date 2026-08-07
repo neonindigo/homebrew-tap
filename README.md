@@ -14,3 +14,4 @@ brew tap neonindigo/tap
 | Cask | Description | Install |
 |---|---|---|
 | `gpxviewer` | GPX route viewer with Quick Look thumbnails | `brew install --cask neonindigo/tap/gpxviewer` |
+| `tokencount` | Menu bar app showing AI provider quota utilisation at a glance | `brew install --cask neonindigo/tap/tokencount` |

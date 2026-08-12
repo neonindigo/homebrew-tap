@@ -1,6 +1,6 @@
 cask "gpxviewer" do
   version "1.1"
-  sha256 "a28ee937e6da3f355468d49c2181145b973707ba358b785cede75dbc409d32eb"
+  sha256 "a59097fd67e3681931a79411c94a7803868835666c73753bc1d8de161d777153"
 
   url "https://github.com/neonindigo/homebrew-tap/releases/download/gpxviewer-v#{version}/GPXViewer-#{version}.zip"
   name "GPXViewer"

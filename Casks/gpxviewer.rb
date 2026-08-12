@@ -1,6 +1,6 @@
 cask "gpxviewer" do
   version "1.1"
-  sha256 "969d1aa95879bf53f49f841e294c4af3128c122fefde962ccf5242ba72e4343c"
+  sha256 "433d96da5e9d993d77dbb87e6fe21bdc004cf31f329fca707fd02f8ace8e6e54"
 
   url "https://github.com/neonindigo/homebrew-tap/releases/download/gpxviewer-v#{version}/GPXViewer-#{version}.zip"
   name "GPXViewer"
@@ -26,9 +26,6 @@ cask "gpxviewer" do
   ]
 
   caveats <<~EOS
-    This build is not notarized: on first launch, right-click GPXViewer.app
-    and choose Open to pass Gatekeeper.
-
     Launch GPXViewer once to finish registering the Quick Look thumbnail
     extension. If .gpx thumbnails still don't appear in Finder:
 

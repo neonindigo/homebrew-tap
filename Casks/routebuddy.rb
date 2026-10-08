@@ -1,6 +1,6 @@
 cask "routebuddy" do
-  version "1.2"
-  sha256 "b7df322507809387faf8856ff2dd6d2533e6b14a55ea64e34f43fe4edbfffa66"
+  version "1.2.1"
+  sha256 "9dc41f0e964fef338499ad9b6dc5445863732e2f5050c602960193e40097428b"
 
   url "https://github.com/neonindigo/homebrew-tap/releases/download/routebuddy-v#{version}/RouteBuddy-#{version}.zip"
   name "RouteBuddy"

@@ -1,7 +1,7 @@
 # neonindigo Homebrew Tap
 
 Homebrew tap for neonindigo apps. Binaries are attached as release assets
-on this repo; app-version tags are namespaced per app (e.g. `gpxviewer-v1.0`).
+on this repo; app-version tags are namespaced per app (e.g. `routebuddy-v1.2`).
 
 ## Usage
 
@@ -13,5 +13,5 @@ brew tap neonindigo/tap
 
 | Cask | Description | Install |
 |---|---|---|
-| `gpxviewer` | GPX route viewer with Quick Look thumbnails | `brew install --cask neonindigo/tap/gpxviewer` |
+| `routebuddy` | GPX route viewer with Quick Look thumbnails | `brew install --cask neonindigo/tap/routebuddy` |
 | `tokencount` | Menu bar app showing AI provider quota utilisation at a glance | `brew install --cask neonindigo/tap/tokencount` |

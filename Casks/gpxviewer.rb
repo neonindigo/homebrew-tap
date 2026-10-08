@@ -12,12 +12,6 @@ cask "gpxviewer" do
 
   app "RouteBuddy.app"
 
-  postflight_steps do
-    run "/System/Library/Frameworks/CoreServices.framework/Frameworks/" \
-        "LaunchServices.framework/Support/lsregister",
-        args: ["-f", "{{appdir}}/RouteBuddy.app"]
-  end
-
   zap trash: [
     "~/Library/Containers/com.neonindigo.RouteBuddy",
     "~/Library/Containers/com.neonindigo.RouteBuddy.RouteBuddyQL",

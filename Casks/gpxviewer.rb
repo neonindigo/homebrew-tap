@@ -1,20 +1,18 @@
-cask "routebuddy" do
+cask "gpxviewer" do
   version "1.2"
   sha256 "b7df322507809387faf8856ff2dd6d2533e6b14a55ea64e34f43fe4edbfffa66"
 
   url "https://github.com/neonindigo/homebrew-tap/releases/download/routebuddy-v#{version}/RouteBuddy-#{version}.zip"
   name "RouteBuddy"
-  desc "GPX route viewer with Quick Look thumbnails"
+  desc "Legacy GPXViewer cask transitioning to RouteBuddy"
   homepage "https://github.com/mikelrob/gpxviewer"
 
-  conflicts_with cask: "gpxviewer"
+  conflicts_with cask: "routebuddy"
   depends_on macos: :tahoe
 
   app "RouteBuddy.app"
 
   postflight_steps do
-    # Register the app (and its Quick Look extension) with LaunchServices
-    # so .gpx files pick up the UTI without waiting for a Finder rescan.
     run "/System/Library/Frameworks/CoreServices.framework/Frameworks/" \
         "LaunchServices.framework/Support/lsregister",
         args: ["-f", "{{appdir}}/RouteBuddy.app"]
@@ -30,11 +28,11 @@ cask "routebuddy" do
   ]
 
   caveats <<~EOS
-    Launch RouteBuddy once to finish registering the Quick Look thumbnail
-    extension. If .gpx thumbnails still don't appear in Finder:
+    The GPXViewer app has been renamed to RouteBuddy. This transitional cask
+    upgrades existing GPXViewer installations without triggering Homebrew's
+    cask-token migration bug.
 
-      1. Enable RouteBuddyQL under System Settings > General >
-         Login Items & Extensions > Quick Look
-      2. Run: qlmanage -r && qlmanage -r cache
+    For a fresh installation, use:
+      brew install --cask neonindigo/tap/routebuddy
   EOS
 end
